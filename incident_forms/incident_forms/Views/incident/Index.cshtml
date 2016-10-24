@@ -1,0 +1,175 @@
+﻿@{
+    ViewBag.Title = "Incident Form";
+}
+
+<div class="wrapper wrapper-content">
+
+    <div class="row ">
+        <div class="col-lg-10">
+
+            <ol class="breadcrumb"></ol>
+        </div>
+        <div class="col-lg-2">
+
+        </div>
+    </div><div class="gray-bg">
+    <img src="~/Content/images/Horizontal_CityLogo_2015.png" class="img-responsive" />
+</div>
+
+    <div class="gray-bg">
+
+
+        <button type="button" id="fontsmall" style="font-size:11px;margin-right:2px;" class="btn btn-outline btn-success  dim  "><i class="fa fa-font"></i></button>
+        <button type="button" id="fontmed" style="font-size:14px;margin-right:2px;" class="btn btn-outline btn-success  dim "><i class="fa fa-font"></i></button>
+        <button type="button" id="fontlarge" style="font-size:17px" class="btn btn-outline btn-success  dim "><i class="fa fa-font"></i></button>
+        <button type="button" id="baloud" onclick="function getProtocol(){return window.location.href.indexOf('https')==0?'https':'http';}(function(){ if(navigator.userAgent.indexOf('MSIE')!=-1 && getProtocol()=='https'){ alert('You are viewing a secure website. We do not currently support BrowseAloud services on secure sites.');}else{document.getElementsByTagName('BODY')[0].appendChild(document.createElement('script')).src=getProtocol()+'://babm.texthelp.com/Bookmarklet.ashx?l=us';}})();" style="font-size:17px" class="btn btn-outline btn-primary  dim "><i class="fa fa-volume-up"></i> BROWSEALOUD</button>
+
+    </div>
+    <!--Form introduction-->
+    <div id="introForm" class="row">
+       
+        <div class="col-md-12">
+            <div class="ibox">
+                <div class="ibox-content form-horizontal">
+
+                    <h2>City of St. Catharines - Claim Form</h2>
+                   
+                        
+                                    
+                                    <h2>Claimant's Information</h2>
+                              
+                            <div class="form-group ">
+
+                                <label class="col-lg-1 col-md-1 control-label lc110">test</label>
+                                <div class="col-lg-4 col-md-4 fc110"></div>
+                                <label class="col-lg-1 col-md-1 control-label lc111">test2</label>
+                                <div class="col-lg-4 col-md-4 fc111"></div>
+
+
+                            </div>
+                          
+                            
+                      
+
+                     
+                       
+
+
+</div>
+            </div>
+        </div>
+    </div>
+
+   
+    <!--loader-->
+    <div class="row" id="reviewapploading" style="display :none;">
+        <div class="col-lg-10">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <h5>Please Wait while we process your application.</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="spiner-example">
+                        <div class="sk-spinner sk-spinner-wave">
+                            <div class="sk-rect1"></div>
+                            <div class="sk-rect2"></div>
+                            <div class="sk-rect3"></div>
+                            <div class="sk-rect4"></div>
+                            <div class="sk-rect5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="apploader" style="display :none;">
+        <div class="col-lg-10">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <h5>Loading form.</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="spiner-example">
+                        <div class="sk-spinner sk-spinner-wave">
+                            <div class="sk-rect1"></div>
+                            <div class="sk-rect2"></div>
+                            <div class="sk-rect3"></div>
+                            <div class="sk-rect4"></div>
+                            <div class="sk-rect5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="confirmForm" class="row" style="display :none;">
+
+        <div class="col-lg-10">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+
+                    <h2>Confirmation</h2>
+
+                    <div class="ibox-content">
+                    
+                        <div class="panel panel-primary">
+                            <div class="panel-heading"> Success!</div>
+                            <p><strong>Submission #: </strong><span id="confirmSubmission"></span></p>
+                            <div class="panel-body">Thank you for your submission. This is an automatic reply confirming your form has been received. Print or save this page for your records.</div>
+                        </div>
+                       
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Personal info disclaimer in footer-->
+    <div id="appFormDis" class="row" >
+        <div class="col-lg-10">
+            <div class="ibox">
+                <p>
+                   Legal verbage goes here - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+                @section Styles {
+                    @Styles.Render("~/plugins/awesomeCheckboxStyles")
+                    @Styles.Render("~/plugins/dataPickerStyles")
+                    @Styles.Render("~/Content/plugins/chosen/chosenStyles")
+                    @Styles.Render("~/Content/plugins/iCheck/iCheckStyles")
+                    @Styles.Render("~/plugins/wizardStepsStyles")
+                    @Styles.Render("~/plugins/sweetAlertStyles")
+                    @Styles.Render("~/plugins/jasnyBootstrapStyles")
+                    @Styles.Render("~/Content/watermeterstyle")
+                    @Styles.Render("~/plugins/select2Styles")
+                    @Styles.Render("~/Content/plugins/dropzone/dropZoneStyles")
+                    @Styles.Render("~/plugins/laddaStyles")
+
+                }
+
+                @section Scripts {
+                    @Scripts.Render("~/plugins/wizardSteps")
+                    @Scripts.Render("~/plugins/iCheck")
+                    @Scripts.Render("~/bundles/jqueryval")
+                    @Scripts.Render("~/plugins/chosen")
+                    @Scripts.Render("~/plugins/knob")
+                    @Scripts.Render("~/plugins/dataPicker")
+                    @Scripts.Render("~/plugins/sweetAlert")
+                    @Scripts.Render("~/plugins/select2")
+                    @Scripts.Render("~/plugins/jasnyBootstrap")
+                    @Scripts.Render("~/plugins/dropZone")
+                    @Scripts.Render("~/plugins/ladda")
+                    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+        });
+    </script>
+
+
+   }
